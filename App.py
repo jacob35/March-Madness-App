@@ -91,12 +91,13 @@ df_1 = df1.append(df2, ignore_index=True)
 df_1.index = range(1,len(df_1)+1)
 
 # Combine Team 1 and Team 2 Dataframe and format
-df_all = df_1.style.highlight_max(color='orange',axis=0,subset=['SRS','eFG%','TRB%','Pace','FT%','3P%']).highlight_min(color='#90ee90',axis=0,subset=\
+df_all = df_1.style.highlight_max(color='#90ee90',axis=0,subset=['SRS','eFG%','TRB%','Pace','FT%','3P%']).highlight_min(color='#90ee90',axis=0,subset=\
     ['Seed','Off. Rank','Def. Rank', 'Net Rank','TOV%']).format({'Off. Rank':'{0:,.0f}','Def. Rank':'{0:,.0f}',\
         'Net Rank':'{0:,.0f}','SRS':'{0:,.2f}','Pace':'{0:,.1f}','eFG%':'{:.1%}','TRB%':'{0:,.1f}','TOV%':'{0:,.1f}','FT%':'{:.1%}','3P%':'{:.1%}'})
 
-st.write(':orange[Orange] = Max value (applied to SRS, eFG%, TRB%, Pace, FT%, and 3P%)')
-st.write(':green[Light Green] = Min value (applied to Seed, Off. Rank, Def. Rank, Net Rank, and TOV%)')
+st.write(':green[Light Green Highlight] = The better value')
+st.write('For Seed, Off. Rank, Def. Rank, Net Rank, and TOV% the better value is the lower value')
+st.write('For SRS, eFG%, TRB%, Pace, FT%, and 3P% the better value is the higher value')
 st.dataframe(df_all)
 st.write('Statistic definitions at bottom of the page')
 
@@ -144,9 +145,11 @@ if choose_round == '1st Round':
     st.dataframe(df_color_1st_round)
 
 # Seed Odds
-st.write('__Odds to advance to the next round__', "(Ex: The 1 seed has a 99.3% odd of advancing to the 2nd Round)")
-st.write(':blue[Light Blue] = ', team_1)
-st.write(':green[Light Green] = ', team_2)
+st.write('__Odds to advance to each round of the tournament by Bracket Seed__', "Ex: 64% of number 5 seeds make it to the second round, but only 5% make the Final Four (about 1 every 5 years)")
+st.write('True Odds - The probabilities that at least one of the four teams at that seed wins the National Championship')
+st.write('There is a 65% that one of the number 1 seeds wins the National Championship')
+st.write(':blue[Light Blue] = ', team_1, ' is a ', seed_1, ' seed')
+st.write(':green[Light Green] = ', team_2, ' is a ', seed_2, ' seed')
 df_seed_stats.index = range(1,len(df_seed_stats)+1)
 d3 = dict.fromkeys(df_seed_stats.select_dtypes('float').columns, "{:.1%}")
 df_color_all= df_seed_stats.style.apply(color_coding_all, axis=1).format(d3)
@@ -155,3 +158,8 @@ st.table(df_color_all)
 # Printing Stat Definitions
 st.header('Statistic Definitions')
 st.table(df_def)
+
+# Links and References
+st.header('References')
+st.write("Team Statistics [link](https://www.sports-reference.com/cbb/seasons/men/2023-advanced-school-stats.html)")
+st.write("Seed Odds/Statistics [link](https://www.betfirm.com/seeds-national-championship-odds/)")
