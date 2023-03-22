@@ -145,8 +145,7 @@ if choose_round == '1st Round':
 
 # Seed Odds
 st.write('__Odds to advance to each round of the tournament by Bracket Seed__', "- Ex: 64% of number 5 seeds make it to the second round, but only 5% make the Final Four (about 1 every 5 years)")
-st.write('True Odds - The probabilities that at least one of the four teams at that seed wins the National Championship')
-st.write('There is a 65% chance that one of the number 1 seeds wins the National Championship')
+st.write('True Odds - The probabilities that at least one of the four teams at that seed wins the National Championship','(There is a 65% chance that one of the number 1 seeds wins the National Championship)')
 st.write(':blue[Light Blue] = ', team_1, ' is a ', seed_1, ' seed')
 st.write(':green[Light Green] = ', team_2, ' is a ', seed_2, ' seed')
 df_seed_stats.index = range(1,len(df_seed_stats)+1)
