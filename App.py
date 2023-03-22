@@ -5,7 +5,6 @@ import pandas as pd
 import streamlit as st 
 #import plotly.express as px
 
-
 # import data
 df_team_all = pd.read_excel('sportsref_download_Advanced_More.xls', sheet_name='Data')            # Get Team Names (All)
 df_team = pd.read_excel('sportsref_download_Advanced_More.xls', sheet_name='Seeds')               # Get Team Names & Seeds
@@ -155,6 +154,20 @@ d3 = dict.fromkeys(df_seed_stats.select_dtypes('float').columns, "{:.1%}")
 df_color_all= df_seed_stats.style.apply(color_coding_all, axis=1).format(d3)
 st.table(df_color_all)
 
+# Notes
+st.header('Notes')
+st.write('__Picking The Winner__')
+st.write('1. Have one or two 1 seed(s) in your final 4 (see 1 seed Final Four apperances link below).')
+st.write('2. ')
+st.write('__1st Round Upsets__')
+st.write('1. It is a 50/50 chance between the 8 and 9 seed.')
+st.write('2. The 5,6, and 7 seeds are all in the 30-40% chances of being upset. You should probably pick one upset for each of these seeds.')
+st.write('__2nd Round Upsets__')
+st.write('1. One 1 seed is upset in the 2nd round by an 8 or 9 about every other year.')
+st.write('2. A 7 or 10 seed have upset a 2 seed in the 2nd round about once per year.')
+st.write('3. A 6 or 11 seed have upset a 3 seed in the 2nd round about once per year.')
+st.write('4. 95% of the past tournamets a double-digit seed has made it to the Sweet 16.')
+
 # Printing Stat Definitions
 st.header('Statistic Definitions')
 st.table(df_def)
@@ -163,3 +176,6 @@ st.table(df_def)
 st.header('References')
 st.write("Team Statistics [link](https://www.sports-reference.com/cbb/seasons/men/2023-advanced-school-stats.html)")
 st.write("Seed Odds/Statistics [link](https://www.betfirm.com/seeds-national-championship-odds/)")
+st.write("1 seed Final Four apperances [link](https://www.ncaa.com/webview/news%3Abasketball-men%3Abracketiq%3A2023-03-14%3Aheres-how-many-no-1-seeds-you-should-pick-your-ncaa-tournament-bracket#:~:text=1%20seeds%20make%20the%20Final,Four%20in%2019%20NCAA%20tournaments)")
+st.write("Upsets [link](https://www.ncaa.com/news/basketball-men/bracketiq/2018-03-13/heres-how-pick-march-madness-upsets-according-data?amp)")
+st.write("ESPN upset stats [link](https://www.espn.com/mens-college-basketball/story/_/id/35719396/2023-march-madness-bracket-facts-men-ncaa-tournament)")
