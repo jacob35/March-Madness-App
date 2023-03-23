@@ -24,10 +24,15 @@ st.set_page_config(layout="wide")
 
 st.markdown("<h1 style='text-align: center; color: blue;'>March Madness Tool (2023)</h1>", unsafe_allow_html=True)
 
-# Header for choosing your team
+# Team Lists and Dictionary
 teams = df_team['School'].values
 seeds = df_team['Seed'].values
 
+team_seed_dict = {}
+for i in range(len(teams)):
+    team_seed_dict[teams[i]] = seeds[i]
+
+# Header for choosing your team
 st.header('Choose Your Teams')
 
 col1, col2, col3 = st.columns(3)
