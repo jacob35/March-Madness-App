@@ -110,6 +110,60 @@ Definitions = ['Offensive Efficiency Rank (1=best, 363=worst)','Defffensive Effi
 df_def = pd.DataFrame(list(zip(Stats,Definitions)), columns = ['Stats', 'Definitions'])
 df_def.index = range(1,len(df_def)+1)
 
+# Finding teams with specific Off. and Def. Efficiencies
+st.header('Offensive and Defensive Efficiency Ranks')
+st.write('__Choose your offensive and defensive efficieny ranks. The team(s) that fit those parameters will display below__')
+
+Off_Rank = df_team_ratings['Off. Rank'].values
+Def_Rank = df_team_ratings['Def. Rank'].values
+Net_Rank = df_team_ratings['Net Rank'].values
+max_Off = int(max(Off_Rank))     # maximum offensive efficiency rank
+max_Def = int(max(Def_Rank))
+one = 1
+
+col1, col2 = st.columns(2)
+
+with col1:
+    # Off Rank
+    input_off = st.number_input('Enter your desired Offensive Efficiency Rank', min_value=0, max_value=max_Off, value=int())
+
+with col2:
+    # Def Rank
+    input_def = st.number_input('Enter your desired Defensive Efficiency Rank', min_value=0, max_value=max_Def, value=int())
+
+if input_off == int(0):
+    st.write(':red[Please enter a value between] ' + str(one) + ' :red[and] ' + str(max_Off))
+elif input_def == int(0):
+    st.write(':red[Please enter a value between] ' + str(one) + ' :red[and] ' + str(max_Def))
+else:
+    rank_names = []   # Team names that fit rank criteria
+    rank_seed  = []   # Team seeds that fit rank criteria
+    rank_off   = []   # Team offensive efficiency rank that fit rank criteria
+    rank_def   = []   # Team defensive efficiency rank that fit rank criteria
+    rank_net   = []   # Team net rank that fit rank criteria
+
+    for i in range(len(Off_Rank)):
+        if int(Off_Rank[i]) <= input_off and int(Def_Rank[i]) <= input_def:
+            name = df_team_ratings['School'][i]
+            seed = team_seed_dict[name]
+
+            # Append Lists
+            rank_names.append(name)
+            rank_seed.append(seed)
+            rank_off.append(Off_Rank[i])
+            rank_def.append(Def_Rank[i])
+            rank_net.append(Net_Rank[i])
+
+    # Create Dataframe
+    zip = list(zip(rank_names, rank_seed, rank_off, rank_def, rank_net))
+    rank_df = pd.DataFrame(zip, columns = ['School', 'Seed', 'Off. Rank', 'Def. Rank', 'Net Rank'])
+    rank_df_sort = rank_df.sort_values('Net Rank')
+    rank_df_sort.index = range(1,len(rank_df_sort)+1)
+    if rank_df_sort.empty:
+        st.write(':red[No teams fit this criteria]')
+    else:    
+        st.dataframe(rank_df_sort)
+
 # Seed Data/Stats
 st.header('Seed Data/Stats')
 
