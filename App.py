@@ -119,11 +119,22 @@ df_def.index = range(1,len(df_def)+1)
 st.header('Offensive and Defensive Efficiency Ranks')
 st.write('__Choose your offensive and defensive efficiency ranks. The team(s) that fit those parameters will display below__')
 
-Off_Rank = df_team_ratings['Off. Rank'].values
-Def_Rank = df_team_ratings['Def. Rank'].values
-Net_Rank = df_team_ratings['Net Rank'].values
+# Get Off. and Def. Rank for only the teams in the tournament
+Off_Rank = []
+Def_Rank = []
+Net_Rank = []
+Schools  = []
+
+for i in range(len(teams)):
+    for j in range(len(df_team_ratings['School'].values)):
+        if teams[i] == df_team_ratings['School'][j]:
+            Schools.append(df_team_ratings['School'][j]) 
+            Off_Rank.append(df_team_ratings['Off. Rank'][j])
+            Def_Rank.append(df_team_ratings['Def. Rank'][j])
+            Net_Rank.append(df_team_ratings['Net Rank'][j])
+
 max_Off = int(max(Off_Rank))     # maximum offensive efficiency rank
-max_Def = int(max(Def_Rank))
+max_Def = int(max(Def_Rank))     # maximum defensive efficiency rank
 one = 1
 
 col1, col2 = st.columns(2)
@@ -149,7 +160,7 @@ else:
 
     for i in range(len(Off_Rank)):
         if int(Off_Rank[i]) <= input_off and int(Def_Rank[i]) <= input_def:
-            name = df_team_ratings['School'][i]
+            name = Schools[i]
             seed = team_seed_dict[name]
 
             # Append Lists
