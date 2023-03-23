@@ -218,5 +218,5 @@ st.table(df_def)
 
 # Links and References
 st.header('References')
-st.write("Team Statistics [link](https://www.sports-reference.com/cbb/seasons/men/2023-advanced-school-stats.html)")
-st.write("Seed Odds/Statistics [link](https://www.betfirm.com/seeds-national-championship-odds/)")
+st.write("Team Statistics Data [link](https://www.sports-reference.com/cbb/seasons/men/2023-advanced-school-stats.html)")
+st.write("Seed Odds/Statistics Data [link](https://www.betfirm.com/seeds-national-championship-odds/)")
