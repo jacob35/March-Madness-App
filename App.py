@@ -173,7 +173,7 @@ else:
     # Create Dataframe
     zip = list(zip(rank_names, rank_seed, rank_off, rank_def, rank_net))
     rank_df = pd.DataFrame(zip, columns = ['School', 'Seed', 'Off. Rank', 'Def. Rank', 'Net Rank'])
-    rank_df_sort = rank_df.sort_values('School')
+    rank_df_sort = rank_df.sort_values('Net Rank')
     rank_df_sort.index = range(1,len(rank_df_sort)+1)
     if rank_df_sort.empty:
         st.write(':red[No teams fit this criteria]')
