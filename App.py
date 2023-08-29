@@ -91,7 +91,7 @@ df_team_2_data_appended = pd.concat([df_team_2_append, df_team_2_data, df_team_2
 df_2_seed_name = pd.DataFrame({'School':[team_2],'Seed':[seed_2]})
 df2 = pd.concat([df_2_seed_name, df_team_2_data_appended], axis=1)
 
-df_1 = df1.append(df2, ignore_index=True)
+df_1 = pd.concat([df1,df2], ignore_index=True)
 df_1.index = range(1,len(df_1)+1)
 
 # Combine Team 1 and Team 2 Dataframe and format
