@@ -6,4 +6,4 @@ This app allows for you to do the following:
 2. Group teams according to defensive and offensive rankings.
 3. See historical seed statistics.
 
-This app utilize data from 
+This app utilize data from sports-reference.com. This app uses pandas to clean, manipulate, and analyze the data. This app uses streamlit for all front end features. 
