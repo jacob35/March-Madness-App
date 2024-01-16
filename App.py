@@ -39,12 +39,12 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     # Higher Seed
-    team_1 = st.selectbox('Choose your first team - lower seed', df_team['School'])
+    team_1 = st.selectbox('Choose your first team - higher seed', df_team['School'])
     for i in range(len(teams)):
         if team_1 == teams[i]:
             seed_1 = seeds[i]
 with col2:
-    team_2 = st.selectbox('Choose your second team - higher seed', df_team['School'])
+    team_2 = st.selectbox('Choose your second team - lower seed', df_team['School'])
     for i in range(len(teams)):
         if team_2 == teams[i]:
             seed_2 = seeds[i]
