@@ -6,12 +6,12 @@ import streamlit as st
 #import plotly.express as px
 
 # import data
-df_team_all = pd.read_excel('sportsref_download_Advanced_More.xls', sheet_name='Data')            # Get Team Names (All)
-df_team = pd.read_excel('sportsref_download_Advanced_More.xls', sheet_name='Seeds')               # Get Team Names & Seeds
-df_team_ratings = pd.read_excel('sportsref_download_Ratings.xls')                                 # Get Team Offensive and Defensive Ratings
-df_seed_data = pd.read_excel('sportsref_download_Advanced_More.xls', sheet_name='Seed Data')      # Get Seed Data
-df_seed_stats = pd.read_excel('sportsref_download_Advanced_More.xls', sheet_name='Seed Stats')    # Get Seed Stats
-df_team_basic = pd.read_excel('sportsref_download_Basic.xls')                                     # Get Team FT% and 3P%
+df_team_all = pd.read_excel('2023/sportsref_download_Advanced_More.xls', sheet_name='Data')            # Get Team Names (All)
+df_team = pd.read_excel('2023/sportsref_download_Advanced_More.xls', sheet_name='Seeds')               # Get Team Names & Seeds
+df_team_ratings = pd.read_excel('2023/sportsref_download_Ratings.xls')                                 # Get Team Offensive and Defensive Ratings
+df_seed_data = pd.read_excel('2023/sportsref_download_Advanced_More.xls', sheet_name='Seed Data')      # Get Seed Data
+df_seed_stats = pd.read_excel('2023/sportsref_download_Advanced_More.xls', sheet_name='Seed Stats')    # Get Seed Stats
+df_team_basic = pd.read_excel('2023/sportsref_download_Basic.xls')                                     # Get Team FT% and 3P%
 
 data_seed_1 = df_seed_data['Seed_1'].values     # Higher Seed Numbers (first round)
 data_seed_per = df_seed_data['Win %'].values    # Hihgher seed win % (first round)
