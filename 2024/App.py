@@ -6,12 +6,12 @@ import streamlit as st
 #import plotly.express as px
 
 # import data
-df_team_all = pd.read_excel('2023/sportsref_download_Advanced_More.xls', sheet_name='Data')            # Get Team Names (All)
-df_team = pd.read_excel('2023/sportsref_download_Advanced_More.xls', sheet_name='Seeds')               # Get Team Names & Seeds
-df_team_ratings = pd.read_excel('2023/sportsref_download_Ratings.xls')                                 # Get Team Offensive and Defensive Ratings
-df_seed_data = pd.read_excel('2023/sportsref_download_Advanced_More.xls', sheet_name='Seed Data')      # Get Seed Data
-df_seed_stats = pd.read_excel('2023/sportsref_download_Advanced_More.xls', sheet_name='Seed Stats')    # Get Seed Stats
-df_team_basic = pd.read_excel('2023/sportsref_download_Basic.xls')                                     # Get Team FT% and 3P%
+df_team_all = pd.read_excel('2024/sportsref_download_Advanced_More.xls', sheet_name='Data')            # Get Team Names (All)
+df_team = pd.read_excel('2024/sportsref_download_Advanced_More.xls', sheet_name='Seeds')               # Get Team Names & Seeds
+df_team_ratings = pd.read_excel('2024/sportsref_download_Ratings.xls')                                 # Get Team Offensive and Defensive Ratings
+df_seed_data = pd.read_excel('2024/sportsref_download_Advanced_More.xls', sheet_name='Seed Data')      # Get Seed Data
+df_seed_stats = pd.read_excel('2024/sportsref_download_Advanced_More.xls', sheet_name='Seed Stats')    # Get Seed Stats
+df_team_basic = pd.read_excel('2024/sportsref_download_Basic.xls')                                     # Get Team FT% and 3P%
 
 data_seed_1 = df_seed_data['Seed_1'].values     # Higher Seed Numbers (first round)
 data_seed_per = df_seed_data['Win %'].values    # Hihgher seed win % (first round)
@@ -22,7 +22,7 @@ Rounds = ['1st Round', '2nd Round', 'Sweet 16', 'Elite 8', 'Final Four', 'Champi
 # Title for app
 st.set_page_config(layout="wide")
 
-st.markdown("<h1 style='text-align: center; color: blue;'>March Madness Tool (2023)</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: blue;'>March Madness Tool (2024)</h1>", unsafe_allow_html=True)
 
 # Team Lists and Dictionary
 teams = df_team['School'].values
@@ -43,11 +43,14 @@ with col1:
     for i in range(len(teams)):
         if team_1 == teams[i]:
             seed_1 = seeds[i]
+    st.write(team_1, ' = ', seed_1, ' seed')
+
 with col2:
     team_2 = st.selectbox('Choose your second team - lower seed', df_team['School'])
     for i in range(len(teams)):
         if team_2 == teams[i]:
             seed_2 = seeds[i]
+    st.write(team_2, ' = ', seed_2, ' seed')
 with col3:
     # Chooose the round
     choose_round = st.selectbox('Choose the round ', Rounds)
@@ -214,8 +217,8 @@ if choose_round == '1st Round':
     st.dataframe(df_color_1st_round)
 
 # Seed Odds
-st.write('__Odds to advance to each round of the tournament by Bracket Seed__', "- Ex: 64% of number 5 seeds make it to the second round, but only 5% make the Final Four (about 1 every 5 years)")
-st.write('True Odds - The probabilities that at least one of the four teams at that seed wins the National Championship','(There is a 65% chance that one of the number 1 seeds wins the National Championship)')
+st.write('__Odds to advance to each round of the tournament by Bracket Seed__', "- Ex: 65% of number 5 seeds make it to the second round, but only 6% make the Final Four (about 1 every 4 years)")
+st.write('True Odds - The probabilities that at least one of the four teams at that seed makes it to that round','(There is a 63% chance that one of the number 1 seeds wins the National Championship)')
 st.write(':blue[Light Blue] = ', team_1, ' is a ', seed_1, ' seed')
 st.write(':green[Light Green] = ', team_2, ' is a ', seed_2, ' seed')
 df_seed_stats.index = range(1,len(df_seed_stats)+1)
@@ -229,5 +232,7 @@ st.table(df_def)
 
 # Links and References
 st.header('References')
-st.write("Team Statistics Data [link](https://www.sports-reference.com/cbb/seasons/men/2023-advanced-school-stats.html)")
-st.write("Seed Odds/Statistics Data [link](https://www.betfirm.com/seeds-national-championship-odds/)")
+st.write("Team Statistics Data [link](https://www.sports-reference.com/cbb/seasons/men/2024-advanced-school-stats.html)")
+st.write("Seed Odds/Statistics Data [link](https://bracketodds.cs.illinois.edu/seedadv.html)")
+st.write("Upsets Data [link](https://www.ncaa.com/news/basketball-men/bracketiq/2018-03-13/heres-how-pick-march-madness-upsets-according-data?amp)")
+st.write("ESPN 10 Bracket Rules [link](https://www.espn.com/mens-college-basketball/story/_/id/39738412/2024-ncaa-men-tournament-10-rules-filling-march-madness-bracket)")
