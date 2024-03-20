@@ -59,8 +59,6 @@ with col3:
 st.header('Data About Teams')
 team_1_new = team_1
 team_2_new = team_2
-team_1_new += '\xa0NCAA'  # Able to search on df_team_all
-team_2_new += '\xa0NCAA'  # Able to search on df_team_all
 df_team_1 = df_team_all[df_team_all['School'] == team_1_new].reset_index(drop=True)
 df_team_2 = df_team_all[df_team_all['School'] == team_2_new].reset_index(drop=True)
 
