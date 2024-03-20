@@ -1,5 +1,5 @@
 # March-Madness-App
-March Madness Streamlit App for 2022-2023 Regular Season Data
+March Madness Streamlit App for 2023-2024 Regular Season Data
 (https://march-madness-app-2024.streamlit.app/)
 
 March Madness Streamlit App for 2022-2023 Regular Season Data
