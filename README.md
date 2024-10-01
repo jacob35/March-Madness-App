@@ -33,9 +33,11 @@ I used pandas to extract, clean, filter, and combine the data. Key functions I u
 3. range()
 4. append()
 
-'''# Combine all DataFrames
+'''Python
+# Combine all DataFrames
 df_team_1_data = df_team_1[['SRS','eFG%','TRB%','TOV%','Pace']]
 df_team_1_data_appended = pd.concat([df_team_1_append, df_team_1_data, df_team_1_data_basic], axis=1)
 df_1_seed_name = pd.DataFrame({'School':[team_1],'Seed':[seed_1]})
 df1 = pd.concat([df_1_seed_name, df_team_1_data_appended], axis=1)
-df1.index = range(1,len(df1)+1)'''
+df1.index = range(1,len(df1)+1)
+'''
