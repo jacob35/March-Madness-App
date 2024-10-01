@@ -4,12 +4,10 @@
 #main_content_wrap {
     margin: 20px; /* This sets the outer margin */
     max-width: 800px; /* Set a max width to keep the content from stretching too wide */
-    margin-left: auto; /* Center the container horizontally */
-    margin-right: auto; /* Center the container horizontally */
 }
 
 #main_content {
-    margin: 20px; /* Inner margin around the content */
+    max-width: 800px; /* Set a max width to keep the content from stretching too wide */
     text-align: center; /* Center the text content if desired */
 }
 @import "{{ site.theme }}";
