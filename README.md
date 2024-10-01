@@ -27,6 +27,7 @@ Offensive and defensive rankings provide a solid overview of a team's strength, 
 
 Lastly, I wanted to include historical seed win percentages to provide a reality check when picking upsets. This data helps gauge whether an upset pick is a bold move or simply too far-fetched. Don’t get me wrong—history is made to be broken—but these stats help measure just how much confidence you need to back that 16 seed taking down a 1 seed (see 2023-2024 app feature image below).
 
+![Screenshot 2024-10-01 at 6 41 52 PM](https://github.com/user-attachments/assets/d90217d5-edf8-4f1a-96b0-e34bca9a4d55)
 
 ## App Build
 I utilized Python to build this app ([Python Script](https://github.com/jacob35/March-Madness-App/blob/main/2024/App.py)). The key libraries I used were Streamlit and pandas. 
