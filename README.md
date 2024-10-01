@@ -1,7 +1,7 @@
 # Overview
 **Results: An app that analyzes 68 college basketball teams (1,200 rows of data) and empowers bracket selections based on insightful data.**
 
-Links to the March Madness Streamlit Apps: 
+Links to the March Madness Streamlit Apps: 🏀
 1. [2023-2024 App](https://march-madness-app-2024.streamlit.app/)
 2. [2022-2023 App](https://jacob35-march-madness-app-app-lt3kow.streamlit.app/)
 
