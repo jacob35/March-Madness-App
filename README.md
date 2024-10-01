@@ -18,9 +18,11 @@ These apps utilizes data from sports-reference.com. These apps utilize pandas to
 
 ## Research & Key App Features
 Before building the app, I conducted thorough research to identify the most important statistics to track. Picking the correct Final Four teams is crucial for a successful bracket, as later rounds generally award more points. Choosing the champion or Final Four teams can significantly impact overall bracket performance. Historical data reveals that every tournament winner ranks in the top 25 for both offense and defense. Based on this, I developed a feature that allows users to filter teams by offensive and defensive rankings, using the values they input (see 2023-2024 app feature image below).
+
 <img width="1319" alt="Screenshot 2024-10-01 at 5 24 15 PM" src="https://github.com/user-attachments/assets/e12a52d8-63a6-4b17-934d-a804ddabd0a4">
 
 Offensive and defensive rankings provide a solid overview of a team's strength, but I also wanted to dive deeper into head-to-head matchups. Sometimes, specific matchups give lower-ranked teams the edge. For instance, a strong three-point shooting team on a hot streak can outplay a poor three-point defending team, regardless of overall rankings. To capture these dynamics, I created a visualization that allows users to select specific teams and analyze their head-to-head matchups (see 2023-2024 app feature image below).
+
 <img width="1312" alt="Screenshot 2024-10-01 at 5 25 06 PM" src="https://github.com/user-attachments/assets/48a45c17-a732-4846-8fc3-d28bf4d306fe">
 
 Lastly, I wanted to include historical seed win percentages to provide a reality check when picking upsets. This data helps gauge whether an upset pick is a bold move or simply too far-fetched. Don’t get me wrong—history is made to be broken—but these stats help measure just how much confidence you need to back that 16 seed taking down a 1 seed (see 2023-2024 app feature image below).
