@@ -23,7 +23,7 @@ The defensive and offensive rank gives a holistic view of how good the team is, 
 
 Lastly, I wanted to see historical seed win percentages. This helps with a gut check of knowing if your upset is maybe too crazy. Do not get me wrong, history is made to be broken. This historical data just lets you know how much justification you need on choosing that 16 seed beating that 1 seed (see image below). 
 
-## App Building
+## App Build
 I utilized Python to build this app ([Python Script](https://github.com/jacob35/March-Madness-App/blob/main/2024/App.py)). The key libraries I used were Streamlit and pandas. 
 
 I used pandas to extract, clean, filter, and combine the data. Key functions I used were:
