@@ -47,3 +47,13 @@ df_1_seed_name = pd.DataFrame({'School':[team_1],'Seed':[seed_1]})
 df1 = pd.concat([df_1_seed_name, df_team_1_data_appended], axis=1)
 df1.index = range(1,len(df1)+1)
 ```
+I also utilized for loops to help aggregate and join data. 
+```Python
+for i in range(len(teams)):
+    for j in range(len(df_team_ratings['School'].values)):
+        if teams[i] == df_team_ratings['School'][j]:
+            Schools.append(df_team_ratings['School'][j]) 
+            Off_Rank.append(df_team_ratings['Off. Rank'][j])
+            Def_Rank.append(df_team_ratings['Def. Rank'][j])
+            Net_Rank.append(df_team_ratings['Net Rank'][j])
+```
