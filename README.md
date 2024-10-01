@@ -16,7 +16,7 @@ These apps utilizes data from sports-reference.com. These apps utilize pandas to
 - [Python Script](https://github.com/jacob35/March-Madness-App/blob/main/2024/App.py)
 - [GitHub Repository](https://github.com/jacob35/March-Madness-App/tree/main)
 
-## Research And Key App Features
+## Research & Key App Features
 Prior to creating the app, I did thorough research to understand what statistics I wanted to see. One key to having a successful bracket is to make sure you pick the correct final four teams. Generally, you get more points on your bracket if you pick the correct team in later rounds. Thus, being able to pick a champion or the final four teams has a huge impact on how well your bracket does. Historical research shows that the winner is always in the top 25 in defensive and offensive rank. Thus, I created a feature to allow you to see what teams have a lower or equal to defensive and offensive rank based on the values you put in (see image below). 
 
 The defensive and offensive rank gives a holistic view of how good the team is, but I also wanted to be able to see details of head to head matchups. Sometimes certain matchups causes the lower ranked team to win. For example, if a good 3 point shooting team gets hot, they may have a better chance against a bad 3 point shooting team no matter what they are ranked. Therefore, I created a visualization where you could choose spcefic teams and see their head to head matchups (see image below).
