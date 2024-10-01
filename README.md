@@ -46,6 +46,7 @@ df_team_ratings['Off. Rank'] = df_team_ratings['ORtg'].rank(ascending=False)
 df_team_ratings['Def. Rank'] = df_team_ratings['DRtg'].rank()
 df_team_ratings['Net Rank'] = df_team_ratings['NRtg'].rank(ascending=False)
 ```
+
 ```Python
 # Combine all DataFrames
 df_team_1_data = df_team_1[['SRS','eFG%','TRB%','TOV%','Pace']]
