@@ -1,13 +1,15 @@
 # Overview
-March ranks among my favorite times of the year! I love this season because 68 of the best college basketball teams compete in a single-elimination tournament to crown a champion. The single-elimination format creates opportunities for thrilling upsets, where lesser-known schools suddenly topple top-ranked teams. Grit, stamina, and a bit of luck for 40 minutes are all a team needs to pull off these awe-inspiring victories.
-
-Along with this incredible tournament comes the March Madness bracket challenge, a chance to earn bragging rights and prove superior college basketball knowledge to friends and family. Given the tournament's unpredictability and frequent upsets, choosing the right team often comes down to luck. I've noticed a pattern when friends or family pick an improbable upset—they say, "I knew this upset was coming because of X statistic." Whether that statistic actually mattered or luck played the larger role, those claims pushed me to rely less on gut feelings and more on data when making picks. That’s why I built an app to visualize key statistics and provide a data-driven approach to filling out brackets.
+**Results: An app that analyzes 68 college basketball teams (1,200 rows of data) and empowers bracket selections based on insightful data.
 
 Links to the March Madness Streamlit Apps: 
 1. [2023-2024 App](https://march-madness-app-2024.streamlit.app/)
 2. [2022-2023 App](https://jacob35-march-madness-app-app-lt3kow.streamlit.app/)
 
-These app allows for you to do the following:
+March ranks among my favorite times of the year! I love this season because 68 of the best college basketball teams compete in a single-elimination tournament to crown a champion. The single-elimination format creates opportunities for thrilling upsets, where lesser-known schools suddenly topple top-ranked teams. Grit, stamina, and a bit of luck for 40 minutes are all a team needs to pull off these awe-inspiring victories.
+
+Along with this incredible tournament comes the March Madness bracket challenge, a chance to earn bragging rights and prove superior college basketball knowledge to friends and family. Given the tournament's unpredictability and frequent upsets, choosing the right team often comes down to luck. I've noticed a pattern when friends or family pick an improbable upset—they say, "I knew this upset was coming because of X statistic." Whether that statistic actually mattered or luck played the larger role, those claims pushed me to rely less on gut feelings and more on data when making picks. That’s why I built an app to visualize key statistics and provide a data-driven approach to filling out brackets.
+
+These apps provide the following features:
 1. Look at head to head matchups with key statistics.
 2. Group teams according to their defensive and offensive efficiency rankings.
 3. See historical seed statistics.
