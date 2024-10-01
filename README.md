@@ -34,6 +34,12 @@ I used pandas to extract, clean, filter, and combine the data. Key functions I u
 4. append()
 
 ```Python
+# Get the Offensive and Defensive Rankings
+df_team_ratings['Off. Rank'] = df_team_ratings['ORtg'].rank(ascending=False)
+df_team_ratings['Def. Rank'] = df_team_ratings['DRtg'].rank()
+df_team_ratings['Net Rank'] = df_team_ratings['NRtg'].rank(ascending=False)
+```
+```Python
 # Combine all DataFrames
 df_team_1_data = df_team_1[['SRS','eFG%','TRB%','TOV%','Pace']]
 df_team_1_data_appended = pd.concat([df_team_1_append, df_team_1_data, df_team_1_data_basic], axis=1)
