@@ -27,9 +27,9 @@ Offensive and defensive rankings provide a solid overview of a team's strength, 
 
 <img width="1312" alt="Screenshot 2024-10-01 at 5 25 06 PM" src="https://github.com/user-attachments/assets/48a45c17-a732-4846-8fc3-d28bf4d306fe">
 
-Lastly, I wanted to include historical seed win percentages to provide a reality check when picking upsets. This data helps gauge whether an upset pick is a bold move or simply too far-fetched. Don’t get me wrong—history is made to be broken—but these stats help measure just how much confidence you need to back that 16 seed taking down a 1 seed (see 2023-2024 app feature image below).
+Lastly, I wanted to include historical seed win percentages to provide a reality check when picking upsets. This data helps gauge whether an upset pick is a bold move or simply too far-fetched. Don’t get me wrong—history is made to be broken—but these stats help measure just how much confidence you need to back that 16 seed taking down a 1 seed. [Seeds Statistics App Feature Image](https://github.com/user-attachments/assets/14cad671-261f-4404-a247-888b5d88087c)
 
-[Seeds](/images/seed_stats.png){:target="_blank"}
+![seed_stats](https://github.com/user-attachments/assets/14cad671-261f-4404-a247-888b5d88087c)
 
 ## App Build
 I utilized Python to build this app ([Python Script](https://github.com/jacob35/March-Madness-App/blob/main/2024/App.py)). The key libraries I used were Streamlit and pandas. 
