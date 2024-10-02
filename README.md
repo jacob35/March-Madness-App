@@ -26,7 +26,7 @@ Before building the app, I conducted thorough research to identify the most impo
 
 Offensive and defensive rankings provide a solid overview of a team's strength, but I also wanted to dive deeper into head-to-head matchups. Sometimes, specific matchups give lower-ranked teams the edge. For instance, a strong three-point shooting team on a hot streak can outplay a poor three-point defending team, regardless of overall rankings. To capture these dynamics, I created a visualization that allows users to select specific teams and analyze their head-to-head matchups. 
 
-[Head to Head App Feature Image]([https://github.com/user-attachments/assets/2781e717-88e0-4e9a-9e22-cb06add16000](https://github.com/user-attachments/assets/a706d9df-dec7-4d71-90bb-a6feee45529d))
+[Head to Head App Feature Image]([https://github.com/user-attachments/assets/2781e717-88e0-4e9a-9e22-cb06add16000](https://github.com/user-attachments/assets/a706d9df-dec7-4d71-90bb-a6feee45529d)
 ![head_to_head](https://github.com/user-attachments/assets/a706d9df-dec7-4d71-90bb-a6feee45529d)
 
 Lastly, I wanted to include historical seed win percentages to provide a reality check when picking upsets. This data helps gauge whether an upset pick is a bold move or simply too far-fetched. Don’t get me wrong—history is made to be broken—but these stats help measure just how much confidence you need to back that 16 seed taking down a 1 seed. 
