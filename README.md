@@ -31,7 +31,7 @@ Lastly, I wanted to include historical seed win percentages to provide a reality
 
 ![Screenshot 2024-10-01 at 6 41 52 PM](https://github.com/user-attachments/assets/d90217d5-edf8-4f1a-96b0-e34bca9a4d55)
 
-[Screenshot 2024-10-01 at 6 41 52 PM](https://github.com/user-attachments/assets/d90217d5-edf8-4f1a-96b0-e34bca9a4d55)
+[![Seeds](/images/seed_stats.png)]([https://www.flipkart.com/](https://github.com/user-attachments/assets/d90217d5-edf8-4f1a-96b0-e34bca9a4d55)){:target="_blank"}
 
 ## App Build
 I utilized Python to build this app ([Python Script](https://github.com/jacob35/March-Madness-App/blob/main/2024/App.py)). The key libraries I used were Streamlit and pandas. 
